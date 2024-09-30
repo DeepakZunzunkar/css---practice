@@ -1,0 +1,44 @@
+p{
+    font-family: Verdana;
+
+}
+
+main{
+    border: 3px solid red;
+   
+    /* percntage work with relative  and percentage help when we have to give in correspond to parent 
+    in this case body is parent for main tag*/
+    width: 75%; 
+
+
+    /* view width(vw) is alwys absolute */
+    /* width: 50vw; 100vw means 100% of screen width */
+}
+
+/* 
+    px is not relative it is absolute 
+    em is relative to the paret 
+    rem is relative to the root ( root is html)
+    html by default font-size 1 em
+*/
+
+header{
+    font-size: 2em;
+}
+
+h1{
+    font-size: 2em;
+}
+
+section{
+    border: 3px solid green;
+  
+    /* here main is parent for section so it take 50% of main 
+    percentage alwys relative to parent  */
+    /* width: 50%; */
+
+
+    width: 50vw;
+    /* height: 100vh; */
+
+}

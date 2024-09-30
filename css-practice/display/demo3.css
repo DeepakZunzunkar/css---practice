@@ -1,0 +1,82 @@
+/* 
+    CSS Display value 
+        - block
+        - inline
+        - inline-block
+        - none
+
+lots of htmls element are block elemnts which means content flows are blocked 
+ex: <p> elemnt is block element where next p  elment it take it next block 
+it disturb the content flow and comes one below anonther even if there spance 
+
+
+there are some inline elements as well like span which take content next to it amd  inline elemnt are flows from left to right if there is space
+
+## block element
+    - p, h, form ,div,  list(ul,li,ol) 
+
+## inline element
+    - span  , images(inline-block) , anchor    
+
+
+
+
+
+*/
+
+*{
+    border: 1px solid red;
+
+    /* even if we keep all bydefault props of p tag to 0 then also second elemnt will go to next bolck
+     */
+     margin: 0;
+     padding: 0;
+     /* border: 0; */
+     box-sizing: border-box;
+}
+h1{
+    font-size: 32px;
+}
+p{
+    display: inline-block;
+    background-color: aqua;
+    width: 300px;
+}
+span{
+    background-color: darkslategrey;
+}
+
+a{
+    /* it doesn't work because it is pure inline elemnt  */
+    width: 40px;
+    background-color: yellow;
+}
+
+img{
+    height: 20vh;
+    width: 20vw;
+}
+
+
+ul{
+    list-style: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: black;
+    color: aliceblue;
+    text-transform: uppercase;
+
+    text-align: end;
+    
+}
+
+ul li{
+    display: inline;
+    margin: 2px;
+    border: 0;
+}
+
+ul li:hover{
+    color: blueviolet;
+    cursor: pointer;
+}

@@ -1,0 +1,59 @@
+
+/* every tag/elemnts has four thing it may be 0px but it has this below 4 props
+    1. content
+    2. padding
+    3. border
+    4. margin 
+
+    div tag has no padding , margin , border  but it has content only 
+*/
+
+/* body has bydefault margin 
+we can overright this or we can overight  all elemnts bydefault props value by using universal selector
+i.e  * as below 
+*/
+
+*{
+    margin: 0;
+    padding:0;
+}
+
+
+/* 
+in below box it seems that box size 200*200 but it is more that that 
+by conncidering padding,border,margin it evalute to 250px 
+so to set box size we have to set css prop as 
+box-sizing:border-box 
+it's bydefault value is content-box 
+*/
+.box{
+    border: 5px solid green;
+
+    /* separate content from border  */
+    /* padding: 10px 5px 3px 4px;  */
+    padding: 20px;
+
+    /* separate two elemnts  */
+    /* margin: 4px 2px 6px 3px; */
+    margin: 20px;
+
+    width: 200px;
+    height: 200px;
+    /* box-sizing: content-box;  by default*/
+    box-sizing: border-box;
+}
+
+.box1{
+    border: 5px solid red;
+    padding: 150px;
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+
+}
+
+h1{
+    color: transparent;
+    text-shadow: 4px 4px 10px black;
+}

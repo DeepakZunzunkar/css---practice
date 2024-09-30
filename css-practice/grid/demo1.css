@@ -1,0 +1,104 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.main-container{
+    
+    border: 2px solid red;
+
+    /* Grid Container Property */
+    display: grid;
+    /* gap: 10px; */
+    row-gap: 10px;
+    column-gap: 5px;
+
+    /*  here we can define width of the coulmn */
+
+    /* grid-template-columns: 100px 200px 300px;  */
+    /* grid-template-columns:30% 70% */
+
+    /* 
+        to craete 4 column of same width , use fr (fraction)    
+     */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+
+    /* grid-template-columns: 2fr 1fr 1fr 1fr; */
+    /* grid-template-columns: repeat(4,1fr); */
+
+    /* grid-template-columns: repeat(4,100px); */
+    /* grid-template-columns: auto auto; */
+
+    /* grid-template-columns: 200px auto; */
+    grid-template-columns: 200px 200px 200px;
+
+    /* here we can define height of the column */
+
+    /* grid-template-rows: 50px 100px; */
+
+    /* we can define height for remaing rows as well */
+    /* grid-auto-rows: 150px; */
+
+    /* using justify-content ,we can aligh item in x- axis or in a row direction
+    or we can move horizonatly   */
+    /* justify-content: center; */
+
+
+    /* align-content by default value is stretch 
+        if you want check the behaviour then set height 
+        and we can move in verical direction 
+    */
+    height: 400px;
+    /* align-content: center; */
+    /* align-items: center; */
+
+}
+
+.box{
+    border: 2px solid green;
+    padding: 12px;
+}
+
+/* Grid Children Property */
+#box-1{
+    background-color: #dcdf2f;
+    /* by default it's value is stretch */
+    /* justify-self: center; */
+
+    /* move item in verticaly */
+    /* align-self: center; */
+
+
+    /* grid-column-start: 1;
+    grid-column-end: 4; */
+
+    /* grid column short end prop */
+    /* grid-column: 1/4; */
+    /* grid-column: 1/ span 3; */
+
+    /* grid-column: 1/ -1; */
+
+    /* grid-row: 1/5; */
+    /* grid-row: 1/ span 3; */
+
+    /* grid area is short end property for both grid-row and grid-column  */
+    /* grid-area: row start / column start /  row went upto / column went upto ; */
+
+    grid-area: 1/1/3/4;
+}
+
+#box-2{
+    /* grid-area: 1/1/0/5; */
+    grid-row-start: 3;
+    grid-row-end: 7;
+}
+
+/* Grid Template area  */
+/* in a grid we can define name value 
+name  grid item can be reffered to by the grid-template-area property 
+of the grid container , the grid area property can also be used to assigm names to grid items 
+
+so instead defining grid templat column we can define grid template areas
+*/
+

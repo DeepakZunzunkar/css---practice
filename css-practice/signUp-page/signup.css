@@ -1,0 +1,125 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato',sans-serif;
+    /* overflow: auto; */
+}
+
+.outer-box{
+    width: 100vw;
+    height: 100vh;
+    /* background:linear-gradient(to top right,rgba(255, 0, 0, 0.712),rgb(126, 126, 201)); */
+    background:linear-gradient(to top right,rgba(167, 185, 155, 0.712),rgb(236, 91, 24));
+   
+}
+
+.inner-box{
+    width: 400px;
+
+    /* background-color: white; */
+    /* to apply glassomorfic design or blur effect , change background  color as below */
+    /* background-color: #ffffffcc; */
+    /* opescity down */
+    /* background-color: #ffffff09; */
+
+    background: linear-gradient(to top left,#ffffffff,#ffffff33);
+
+    /*  by changing b-color , no much blur effect seems  so to apply more blur we can use backdrop  */
+    backdrop-filter: blur(8px);
+
+    margin: 0 auto;
+    position: relative;
+    top: 40%;
+    /* to adjust window at at center or just litle bit above center */
+    transform: translateY(-40%);
+    border-radius: 8px;
+    padding: 20px 40px;
+
+    /* shadow effect  */
+    /* box-shadow: 2px 2px 5px rgb(126, 126, 201); */
+    box-shadow: 2px 2px 5px;
+
+    z-index: 1;
+}
+
+.signup-header h1{
+    color: #212121;
+    font-size: 2.5rem;
+    margin: 6px 0;
+}
+
+.signup-header p{
+    color: #555;
+    font-size: 0.8rem;
+}
+
+.signup-body{
+    margin: 20px 0;
+}
+
+.signup-body p{
+    margin: 10px;
+}
+
+.signup-body p label{
+    display: block;
+    font-weight: 200px;
+}
+
+.signup-body p input{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 4px;
+}
+
+
+/* selector based on type */
+.signup-body p input[type="submit"]{
+    background-color: #3498db;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* sudo selector */
+.signup-body p input[type="submit"]:hover{
+    background-color: #145986;
+}
+
+.signup-footer p{
+    color: #555;
+    text-align: center;
+}
+
+.signup-footer a{
+    color: #3498db;
+}
+
+
+.circle {
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    /* background: linear-gradient(to bottom left,#e9cdadaa,#f15b04 ); */
+    position: absolute;
+  
+}
+
+.c1{
+    background: linear-gradient(to bottom left,#b0d1c2aa,#f15b04 );
+    top: 10px;
+    left: 140px;
+}
+
+.c2{
+    background: linear-gradient(to bottom left,#b0d1c2aa,#f15b04 );
+    bottom:100px;
+    right: 95px;
+}

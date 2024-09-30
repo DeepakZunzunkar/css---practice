@@ -1,0 +1,183 @@
+/* 
+    for Flex to work we required parent and child containers 
+    once display prop value set as flex then  all child of container will have flex effect 
+    The flex container becomes flixible by setting the display property to flex 
+
+    horizontal axis as main axis 
+    vertyical axis as cross axis
+
+    whenever we do flex it's alwys around Main axis which means child container will move according main axis 
+    to change this we can use flex-direction whose value alwys is row we can change it to column 
+
+    The direct child elemnt of a flex container automatically becomes flexible (flex) items.
+*/
+
+*{
+    box-sizing: border-box;
+}
+
+.container{
+
+    
+    /* Flex container proptery 
+    
+        - flex-direction
+        - flex-wrap
+        - flex-flow
+        - justify-content
+        - align-items
+        - align-content
+    */
+
+    height: 400px;
+    border:2px solid purple;
+
+    /* to behave this container element as flex  */
+    display: flex;
+
+    /* flex-direction: column; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column-reverse; */
+
+
+    /* when width is changing then child container get started shrinking and they get overlapped at one point so to avoid this 
+    we can use flex-wrap which will take elemtn one down below means no overlap it  set or adjust container elements  */
+
+    /* flex-wrap: wrap; */
+    /* flex-wrap: wrap-reverse; */
+
+    /* to make space between elemnt within container we margin in child elemnts but instead of that 
+    we can use gap , which will do the same 
+    it define gap between child elemnts  */
+    
+    /* gap: 10px; */
+
+    row-gap: 25px;
+    column-gap: 10px;
+
+    /* to use flex-wrap and flex direction with sigle css then we can use flex-flow 
+    this is shorthand prperty for this two propterty */
+    flex-flow: wrap row;
+
+    /*  we mostly use this justify-content css to make content justify around main axis 
+    or to align the item on the main axis which in this case is the inline axis running horizontally 
+    if we want to justy content on vertically axis then we have to change the flex direction to column */
+
+    justify-content: space-around;
+    /* justify-content: space-between; */
+    /* justify-content: flex-start; */
+    /* justify-content: flex-end; */
+    /* justify-content: center; */
+
+    /* if you observe we intially don't have  height for child containers but actually take ful height as of parent 
+        but it should take height same as content but it is inherited from parent so how this happen ?
+        this is because of align-item by default propetry value as stretch as this 
+        align-item is  used to align  item around cross axis i.e vertyical axis 
+
+        it is mostly used when we have to make one div inside another div at center 
+        we make parent continer as display:flex and use justify-content: center; and align-items: center;
+    */
+    /* align-items: stretch; */
+    align-items: center;
+    /* align-items: flex-start; */
+    /* align-items: flex-end; */
+
+    /* after shrink we may find there is large gap between two  rows this we can resolve by using alig-content */
+    align-content: space-evenly;
+
+
+
+}
+
+.box{
+    border: 2px solid yellowgreen;
+    /* margin: 10px 4px; */
+    width: 80px;
+
+    /* 
+     The direct child elemnt of a flex container automatically becomes flexible (flex) items.
+    Flex child Items property
+        - order
+        - flex-grow
+        - flex-shrink
+        - flex-basis
+        - flex
+        - align-self
+    
+    */
+
+
+}
+
+/* by deafult all child container order value is 0 
+   contianer or element whose order value is heigh then it comes to last 
+   here we can define which elemnt can where we want to locate .
+
+   flex-grow will take the space if there and start grow .
+   heigher the value will start  grow fast and byfeault property value is 0
+
+   same flex-shrink work in reverse and it's by default value is 1
+   here we can define which will shrink first when width is adjusted
+   to see this effect remove or coment this flex-flow: wrap row; from parent container 
+
+   main axis ki direction mai whats the intial width of the container that we can define using flex-basis
+*/
+#box-1{
+    order: 1;
+    flex-grow: 2;
+}
+
+
+#box-2{
+    flex-shrink: 3;
+}
+
+#box-3{
+
+    /* defin intial width  */
+    flex-basis: 200px;
+}
+
+#box-5{
+    order: 2;
+    flex-grow: 1;
+}
+
+#box-4{
+    order: 1;
+    flex-shrink: 2;
+}
+
+.container1{
+    margin-top: 20px;
+    height: 400px;
+    background: linear-gradient(to top left,yellow,green );
+    border: 2px solid purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+    /* flex-flow: wrap row;*/
+    gap: 10px; 
+}
+
+.box1{
+    /* width: 100px; */
+    /* width: 80px; */
+    border: 2px solid white;
+    background: linear-gradient(to top left ,red,purple);
+    /* flex-basis: 25%; */
+}
+
+
+#boxc1-1{
+    /* shortcut for flow-grow , flex-shrink,flex-basis is flex  */
+    flex: 0 2 200px;
+
+}
+
+/* if you want children to align itself around cross axis the we use align-self */
+#boxc1-5{
+    align-self: stretch;
+    background-color: red;
+}

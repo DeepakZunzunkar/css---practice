@@ -1,0 +1,92 @@
+/* 
+    overflow define how content should get flow  in area 
+    css overflow property control what happens to content that is too big to fit into an area 
+
+    overflow values are --> visble,hidden,scroll,auto
+    bydefault overflow property of elemnt is visible 
+*/
+
+.container{
+    height: 300px;
+    width: 300px;
+    border: 1px solid green;
+    /* overflow: visible; */
+    /* overflow: hidden; */
+    /* overflow: scroll; */
+    overflow: auto;
+}
+
+/* 
+    css float property specify how an element should float.
+    float values are - letf , right , none, inherit
+*/
+
+/* <!-- Exxample 02: float --> */
+/* .container1{
+
+    border: 1px solid green;
+    height: 300px;
+    overflow: auto;
+}
+
+.block1{
+        overflow: auto;
+}
+
+.img1{
+    float: right;
+    margin-left: 20px;
+
+}
+
+.p1{
+    border: 1px solid red;
+    margin-right: 50px;
+}
+
+.img2{
+    float: left;
+    margin-right:40px
+}
+
+.p2{
+    overflow: auto;
+} */
+
+/*  css clear property tell stop float either by left or roght or both 
+    clear and float property we should use mostly in case of image and text 
+
+    and for layout formate we should  use flex , grid
+*/
+
+.container1{
+
+    border: 1px solid green;
+    height: 300px;
+    overflow: auto;
+}
+
+
+.img1{
+    float: right;
+    margin-left: 20px;
+
+}
+
+.p1{
+    border: 1px solid red;
+    margin-right: 50px;
+    clear: both;
+}
+
+.img2{
+    float: left;
+    margin-right:40px
+}
+
+.p2{
+    overflow: auto;
+    /* clear: right; */
+    /* clear: left; */
+    clear: both;
+} 
