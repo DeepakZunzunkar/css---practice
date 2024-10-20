@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* bydefault position value is static 
+            other values are - relative, absolute
+        */
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .container {
+            background-color: burlywood;
+            height: 400px;
+            width: 400px;
+            margin: 100px;
+
+            /* position: relative; */
+        }
+
+        .box {
+
+            height: 100px;
+            width: 100px;
+            text-transform: uppercase;
+            color: white;
+            font-size: 14px;
+            font-weight: bolder;
+            text-align: center;
+
+        }
+
+        .relativebox {
+            background-color: #110c55;
+
+            /* it work relative to the parent element */
+            position: relative;
+
+            /* from current position (top of parent i.e container)
+             moves toward bootom */
+            /* top:40px; */
+
+            /* from current position of left side moves to right side */
+            /* left: 40px; */
+
+            /* from current position moves toward left */
+            /* right: 40px; */
+
+            /* from current position ,element towards top */
+            /* bottom: 40px; */
+
+            /*  to alighn it center
+                as we know container size is 400px*400px and box size is 100*100px
+            */
+            top: 150px;
+            left: 150px;
+        }
+
+        .absolutebox {
+            background-color: #11250b;
+
+            /* it work relative to the root element i.e html
+            but this sentense it not exactly true if we do practical  
+            
+            it work relative to that parent which has position property relative
+            if we set container position property relative then check location change of this box
+            measn just parent if it is relative then this box behave same position=relative  not the absolute 
+            */
+            position: absolute;
+
+
+            /* 
+             */
+
+
+            /* from the root elemnt top it moves toward bottom */
+            /* top: 0px; */
+
+            /* from the root elemnt  bottom it moves toward top */
+            /* bottom: 0px; */
+
+            /* from the root elemnt left it moves toward right */
+            /* left: 20px; */
+
+            /* from the root elemnt right it moves toward left */
+            /* right: 200px; */
+
+
+            /*  to alighn it center
+                as we know root i.e html take screen size 
+            */
+            top: 50vh;
+            left: 50vw;
+
+        }
+
+        .testabs {
+            /* this box get overlap or hide to the absolute box when we don't define 
+            top,left... to that absolute box */
+
+            background: #d5ec05;
+        }
+
+        .fixedbox {
+            background-color: #2e160c;
+
+            /* it work relative to the root element i.e html  */
+            position: fixed;
+            top: 0;
+        }
+
+        .spacer {
+            height: 300vh;
+        }
+
+        .fixedbox1 {
+            background: linear-gradient(to top right, rgba(226, 228, 226, 0.712), rgb(235, 106, 1));
+            height: 100px;
+            width: 100px;
+            border-radius: 50px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+
+            p {
+                position: relative;
+                top: 40px;
+                left: 30px;
+                text-align: start;
+                color: #807b73;
+            }
+        }
+
+
+        .stickybox {
+            background-color: #520833;
+
+            /* it work relative to the parent element */
+            position: sticky;
+            top: 200px;
+            left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box relativebox">
+            <p>relative position</p>
+        </div>
+
+        <div class="box absolutebox">
+            <p>absolute position</p>
+        </div>
+        <div class="box testabs">
+        </div>
+        <div class="box fixedbox">
+            <p>fixed position</p>
+        </div>
+        <div class="fixedbox1">
+            <p>fixed position</p>
+        </div>
+        <div class="box stickybox">
+            <p>sticky position</p>
+        </div>
+        <div class="spacer">
+
+        </div>
+    </div>
+</body>
+
+</html>

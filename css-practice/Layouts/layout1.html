@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 1</title>
+    <style>
+        /* Global reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            /* Full viewport height */
+        }
+
+        .header,
+        .footer {
+            background-color: #112168;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            flex-shrink: 0;
+            /* Prevent shrinking */
+        }
+
+        /* The main content will take up the remaining space */
+        .main-body {
+            flex-grow: 1;
+            /* Expand to fill available space */
+            background-color: #f4f4f4;
+            padding: 20px;
+            overflow-y: auto;
+            /* Add scroll if content overflows */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+
+            .header,
+            .footer {
+                padding: 15px 0;
+                /* Adjust padding for smaller screens */
+                background: #1b3304;
+            }
+
+            .main-body {
+                padding: 10px;
+                /* Adjust padding for smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .header,
+            .footer {
+                padding: 10px 0;
+                font-size: 0.9rem;
+                /* Adjust text size for small screens */
+                background: #3f063a;
+            }
+
+            .main-body {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="header">
+            <h1>Header</h1>
+        </header>
+        <main class="main-body">
+            <p>Main content goes here.</p>
+        </main>
+        <footer class="footer">
+            <p>Footer</p>
+        </footer>
+    </div>
+</body>
+
+</html>

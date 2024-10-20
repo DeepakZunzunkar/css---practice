@@ -41,6 +41,7 @@ it's bydefault value is content-box
     height: 200px;
     /* box-sizing: content-box;  by default*/
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .box1{

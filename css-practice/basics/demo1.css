@@ -17,7 +17,7 @@ main{
 
 /* 
     px is not relative it is absolute 
-    em is relative to the paret 
+    em is relative to the parent 
     rem is relative to the root ( root is html)
     html by default font-size 1 em
 */

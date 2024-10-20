@@ -7,7 +7,7 @@
 
 lots of htmls element are block elemnts which means content flows are blocked 
 ex: <p> elemnt is block element where next p  elment it take it next block 
-it disturb the content flow and comes one below anonther even if there spance 
+it disturb the content flow and comes one below anonther even if there space 
 
 
 there are some inline elements as well like span which take content next to it amd  inline elemnt are flows from left to right if there is space
@@ -25,7 +25,7 @@ there are some inline elements as well like span which take content next to it a
 */
 
 *{
-    border: 1px solid red;
+    border: 1px solid green;
 
     /* even if we keep all bydefault props of p tag to 0 then also second elemnt will go to next bolck
      */
@@ -65,7 +65,7 @@ ul{
     background-color: black;
     color: aliceblue;
     text-transform: uppercase;
-
+    
     text-align: end;
     
 }
