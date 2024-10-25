@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Test 1 - container property </title>
+    <style>
+
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        .container{
+            border: 1px solid brown;
+            background: #e6e6e6;
+            height: 400px;
+            width: 400px;
+            margin: 50px 0px 0px 50px;
+            
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            
+            gap: 20px;
+            /* column-gap: 20px; */
+
+            
+            justify-content: start;
+            align-items: start;
+            align-content: start;
+        }
+
+        .box{
+            border: 1px solid green;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="box">box-1</div>
+       <div class="box">box-2</div>
+       <div class="box">box-3</div>
+       <div class="box">box-4</div>
+       <div class="box">box-5</div>
+       <div class="box">box-6</div>
+       <div class="box">box-7</div>
+       <div class="box">box-8</div>
+    </div>
+</body>
+</html>

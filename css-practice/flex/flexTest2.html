@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Test 2 - child property</title>
+
+    <!-- we can make individual children behave differently  -->
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            /* background-color: white; */
+        }
+
+        .container {
+            border: 1px solid brown;
+            background: #e6e6e6;
+            height: 400px;
+            /* width: 400px; */
+            margin: 10px 10px 10px 10px;
+
+
+            display: flex;
+            flex-direction: row;
+            /* flex-wrap: wrap; */
+
+            gap: 10px;
+            /* column-gap: 20px; */
+            /* justify-content: start;
+            align-items: start;
+            align-content: start; */
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            border: 1px solid green;
+            padding: 1px;
+            width: 80px;
+        }
+
+        /* order - bydefault value of this is  0 and who have order value max will 
+         goes end mostly this order we avoid as this is not good practice because reader mostly reda html code chrnological order
+         and if we change order in css then redablity went wrong */
+
+        #box-1 {
+            background-color: red;
+            order: 1;
+        }
+
+        #box-5 {
+            background-color: green;
+            order: 2;
+        }
+
+        /* flex-grow : - btdefault value is 0 and here we can tell particular child to grow 
+        but it grows if there is  space to grow*/
+        #box-5 {
+            flex-grow: 1;
+        }
+
+        #box-3 {
+            background-color: yellow;
+            flex-grow: 2;
+        }
+
+        /* flex-srink - by default value is 1 ,here we can defin konsa wala element will get srink first and fast */
+        #box-3 {
+            flex-shrink: 2;
+        }
+
+        #box-4 {
+            flex-shrink: 5;
+        }
+
+         /* example for -  flex-basis - we can define intial width in according to main axis  */
+        .container1 {
+
+            border: 1px solid brown;
+            background: #e6e6e6;
+            height: 400px;
+            display: flex;
+            flex-flow: wrap row;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+
+            .card {
+
+                border: 1px solid green;
+                
+                /* if we want show all the boxes in two column  */
+                /* flex-basis: 35%; */
+
+            }
+
+            #card-1{
+                /* defines the initial width in the direction of the main axis  for  particular child */
+                /* flex-basis: 200px; */
+            }
+
+            #card-2{
+
+                /* flex - it is shortend proptery for floex-grow,shrink,basis */
+                /* flex: grow shrink basis */
+                /* if we set shrink 0 then it it will not wrap and shrink any more  */
+                flex: 0 0 200px;
+            }
+
+            /* align-self - if we want any childrent to align itself to the cross axis  */
+            #card-3{
+                align-self: start;
+            }
+
+            #card-6{
+                align-self: stretch;
+            }
+        }   
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="box-1">box-1</div>
+        <div class="box" id="box-2">box-2</div>
+        <div class="box" id="box-3">box-3</div>
+        <div class="box" id="box-4">box-4</div>
+        <div class="box" id="box-5">box-5</div>
+        <div class="box" id="box-6">box-6</div>
+        <div class="box" id="box-7">box-7</div>
+        <div class="box" id="box-8">box-8</div>
+    </div>
+    <div class="container1">
+        <div class="card" id="card-1">card-1</div>
+        <div class="card" id="card-2">card-2</div>
+        <div class="card" id="card-3">card-3</div>
+        <div class="card" id="card-4">card-4</div>
+        <div class="card" id="card-5">card-5</div>
+        <div class="card" id="card-6">card-6</div>
+        <div class="card" id="card-7">card-7</div>
+        <div class="card" id="card-8">card-8</div>
+    </div>
+</body>
+
+</html>

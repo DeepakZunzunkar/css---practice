@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Test 4 </title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            /* Full viewport height */
+            height: 100vh;
+        }
+
+        header {
+            /* border: 1px solid red; */
+            flex-shrink: 0;
+
+            /* shadow effect  */
+            /* box-shadow: 2px 2px 5px rgb(126, 126, 201); */
+            box-shadow: 2px 2px 5px;
+
+        }
+
+        main {
+            /* border: 1px solid blue; */
+            padding: 10px;
+            flex-grow: 1;
+      
+        }
+
+        .main-container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            border: 1px solid red;
+            height: 60px;
+            width: 60px;
+        }
+
+        footer {
+            /* border: 1px solid green; */
+            flex-shrink: 0;
+
+            box-shadow: 2px 2px 5px 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Heading</h1>
+        </header>
+        <main>
+            <div class="main-container">
+                <p>Main content</p>
+            <div class="card">card-1</div>
+            <div class="card">card-2</div>
+            <div class="card">card-3</div>
+            <div class="card">card-4</div>
+            <div class="card">card-5</div>
+            <div class="card">card-6</div>
+            <div class="card">card-7</div>
+            <div class="card">card-8</div>
+            <div class="card">card-9</div>
+            <div class="card">card-10</div>
+            <div class="card">card-11</div>
+            <div class="card">card-12</div>
+            <div class="card">card-13</div>
+            <div class="card">card-14</div>
+            <div class="card">card-15</div>
+            <div class="card">card-16</div>
+            <div class="card">card-17</div>
+            <div class="card">card-18</div>
+            <div class="card">card-19</div>
+            <div class="card">card-20</div>
+            <div class="card">card-21</div>
+            <div class="card">card-22</div>
+            <div class="card">card-23</div>
+            <div class="card">card-24</div>
+            <div class="card">card-25</div>
+            <div class="card">card-26</div>
+            <div class="card">card-27</div>
+            <div class="card">card-28</div>
+            <div class="card">card-29</div>
+            <div class="card">card-30</div>
+            <div class="card">card-31</div>
+            <div class="card">card-32</div>
+            <div class="card">card-33</div>
+            <div class="card">card-34</div>
+            <div class="card">card-35</div>
+            <div class="card">card-36</div>
+            <div class="card">card-37</div>
+            <div class="card">card-38</div>
+            <div class="card">card-39</div>
+            <div class="card">card-40</div>
+            <div class="card">card-41</div>
+            <div class="card">card-42</div>
+            <div class="card">card-43</div>
+            <div class="card">card-44</div>
+            <div class="card">card-45</div>
+            <div class="card">card-46</div>
+            <div class="card">card-47</div>
+            <div class="card">card-48</div>
+            <div class="card">card-49</div>
+            <div class="card">card-50</div>
+            <div class="card">card-51</div>
+            <div class="card">card-52</div>
+            <div class="card">card-53</div>
+            <div class="card">card-54</div>
+            <div class="card">card-55</div>
+            <div class="card">card-56</div>
+            <div class="card">card-57</div>
+            <div class="card">card-58</div>
+            <div class="card">card-59</div>
+            <div class="card">card-60</div>
+            <div class="card">card-61</div>
+            <div class="card">card-62</div>
+            <div class="card">card-63</div>
+            <div class="card">card-64</div>
+            <div class="card">card-65</div>
+            <div class="card">card-66</div>
+            <div class="card">card-67</div>
+            <div class="card">card-68</div>
+            <div class="card">card-69</div>
+            <div class="card">card-70</div>
+            <div class="card">card-71</div>
+            <div class="card">card-72</div>
+            <div class="card">card-73</div>
+            <div class="card">card-74</div>
+            <div class="card">card-75</div>
+            <div class="card">card-76</div>
+            <div class="card">card-77</div>
+            <div class="card">card-78</div>
+            <div class="card">card-79</div>
+            <div class="card">card-80</div>
+            <div class="card">card-81</div>
+            <div class="card">card-82</div>
+            <div class="card">card-83</div>
+            <div class="card">card-84</div>
+            <div class="card">card-85</div>
+            <div class="card">card-86</div>
+            <div class="card">card-87</div>
+            <div class="card">card-88</div>
+            <div class="card">card-89</div>
+            <div class="card">card-90</div>
+            <div class="card">card-91</div>
+            <div class="card">card-92</div>
+            <div class="card">card-93</div>
+            <div class="card">card-94</div>
+            <div class="card">card-95</div>
+            <div class="card">card-96</div>
+            <div class="card">card-97</div>
+            <div class="card">card-98</div>
+            <div class="card">card-99</div>
+            <div class="card">card-100</div>
+            </div>
+        </main>
+        <footer>
+            <p>footer</p>
+        </footer>
+    </div>
+</body>
+
+</html>
